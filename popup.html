@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { 
+      width: 360px; 
+      font-family: 'Microsoft JhengHei', 'Segoe UI', sans-serif; 
+      padding: 0; 
+      background: #0a192f; /* 深藍底色 */
+      color: #e6f1ff;
+      margin: 0;
+    }
+    .header { 
+      background: #112240;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #64ffda; /* 湖水綠點綴 */
+      border-bottom: 2px solid #233554;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    #videoList { 
+      max-height: 520px; 
+      overflow-y: auto; 
+      padding: 15px;
+    }
+    /* 捲軸美化 */
+    #videoList::-webkit-scrollbar { width: 6px; }
+    #videoList::-webkit-scrollbar-thumb { background: #233554; border-radius: 10px; }
+
+    .video-item { 
+      background: #112240; 
+      border: 1px solid #233554; 
+      padding: 12px; 
+      margin-bottom: 15px; 
+      border-radius: 8px;
+    }
+    .video-item:hover { border-color: #64ffda; }
+
+    .preview-container {
+      width: 100%;
+      height: 180px;
+      background: #000;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    video { width: 100%; height: 100%; object-fit: contain; }
+
+    .info { 
+      font-size: 12px; 
+      color: #8892b0; 
+      word-break: break-all; 
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .file-tag {
+      color: #64ffda;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+
+    button { 
+      background: #64ffda; 
+      color: #0a192f; 
+      border: none; 
+      width: 100%; 
+      padding: 12px; 
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    button:hover { 
+      background: #45c2a5;
+      box-shadow: 0 0 12px rgba(100, 255, 218, 0.4);
+    }
+    .empty { 
+      text-align: center; 
+      color: #8892b0; 
+      padding: 50px 20px; 
+      font-size: 14px; 
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">影片下載掛件</div>
+  <div id="videoList">
+    <div class="empty">正在深度掃描網頁影片...<br>(包含嵌入式框架)</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

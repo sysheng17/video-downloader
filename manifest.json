@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "影片下載掛件",
+  "version": "3.0",
+  "description": "支援深色模式與預覽功能的強力影片偵測工具",
+  "permissions": ["activeTab", "scripting", "downloads"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
